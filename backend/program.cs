@@ -8,3 +8,5 @@ Console.WriteLine(DateTime.Now);
 Console.WriteLine("Введите имя");
 string name = Console.ReadLine();
 Console.WriteLine("Привет," + name + "!");
+DateTime someDate = new DateTime(1582, 10, 5);
+Console.WriteLine(someDate.DayOfWeek);

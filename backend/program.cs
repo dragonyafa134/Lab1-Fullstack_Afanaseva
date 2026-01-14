@@ -1,12 +1,28 @@
-﻿// See https://aka.ms/new-console-template for more information
-using System.Data;
+﻿class Program
+{
+    static void Main(string[] args)
+    {
+        Console.WriteLine("Hello, World!");
+        Console.WriteLine("Меня зовут Афанасьева ДН");
+        Console.WriteLine(DateTime.Now);
 
-Console.WriteLine("Hello, World!");
-Console.WriteLine("Меня зовут Афанасьева ДН");
-Console.WriteLine(DateTime.Now);
+        while (true)
+        {
+            Console.WriteLine("Введите имя");
+            string name = Console.ReadLine();
+            Console.WriteLine($"Привет, {name}!");
 
-Console.WriteLine("Введите имя");
-string name = Console.ReadLine();
-Console.WriteLine("Привет," + name + "!");
-DateTime someDate = new DateTime(1582, 10, 5);
-Console.WriteLine(someDate.DayOfWeek);
+            DayOfWeek today = DateTime.Now.DayOfWeek;
+            Console.WriteLine($"Сегодня {today}");
+
+            Console.WriteLine("Хотите продолжить? (y/n)");
+            string input = Console.ReadLine();
+
+            if ( input == "y")
+            {
+                Console.WriteLine("Конец");
+                break;
+            }
+        }
+    }
+}
